@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Thread02 {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -32,11 +32,11 @@ public class Thread02 {
                         try {
                             Thread.sleep(10000);
                         } catch (InterruptedException ex) {
-                            Logger.getLogger(Thread02.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     }
                 } catch (IOException ex) {
-                    Logger.getLogger(Thread02.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }).start();
 

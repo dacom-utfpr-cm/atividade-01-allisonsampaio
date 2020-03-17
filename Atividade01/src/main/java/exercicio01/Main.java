@@ -9,7 +9,7 @@ package exercicio01;
 
 import java.util.Random;
 
-public class Thread01 {
+public class Main {
 
     public static void main(String[] args) {
         int i;
