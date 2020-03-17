@@ -10,19 +10,38 @@ package exercicio02;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        String caminho = "C:/Users/allis/Documents/utfpr/pc/atividade-01-allisonsampaio";
+
         try {
-            BufferedReader file = new BufferedReader(new FileReader("file.txt"));
+            BufferedReader file = new BufferedReader(new FileReader(caminho + "/files/exercicio02.txt"));
 
             new Thread(() -> {
-                
+                try {
+                    while (file.ready()) {
+                        System.out.println(file.readLine());
+                        try {
+                            Thread.sleep(10000);
+                        } catch (InterruptedException ex) {
+                            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                    }
+                } catch (IOException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }).start();
 
         } catch (FileNotFoundException e) {
+            System.out.println(e);
         }
+
     }
 
 }
