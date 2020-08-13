@@ -17,8 +17,9 @@ import java.util.logging.Logger;
 public class Main {
 
     public static void main(String[] args) {
+        String caminho = "../files";
         try {
-            BufferedReader file = new BufferedReader(new FileReader("exercicio02.txt"));
+            BufferedReader file = new BufferedReader(new FileReader(caminho + "/exercicio02.txt"));
 
             new Thread(() -> {
                 Thread.currentThread().setName("exercicio02");

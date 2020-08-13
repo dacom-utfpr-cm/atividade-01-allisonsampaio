@@ -21,7 +21,7 @@ public class Main {
     public static void main(String[] args) {
 
         int i;
-        String caminho = "C:/Users/allis/Documents/utfpr/pc/atividade-01-allisonsampaio";
+        String caminho = "../files";
 
         Random rand = new Random();
 
@@ -38,7 +38,7 @@ public class Main {
         }
 
         try {
-            BufferedReader file = new BufferedReader(new FileReader(caminho + "/files/exercicio02.txt"));
+            BufferedReader file = new BufferedReader(new FileReader(caminho + "/exercicio02.txt"));
 
             new Thread(() -> {
                 Thread.currentThread().setName("exercicio02");
